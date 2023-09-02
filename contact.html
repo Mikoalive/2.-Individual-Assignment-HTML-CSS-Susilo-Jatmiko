@@ -22,7 +22,9 @@
   </style>
 
 </head>
-<body class="bg-[#F2F5F9] px-[7vw] pb-20">
+<body>
+
+  <div class="bg-[#F2F5F9] px-[7vw] pb-20">
   <header>
     <div>
     <div id="my-portfolio" name="portfolio" class="flex items-center justify-center lg:justify-start md:justify-start h-[17vh]">
@@ -103,7 +105,7 @@
 
   <!-- navbar start -->
 
-  <div id="navbar" class="flex items-center justify-center gap-7 h-[11vh] mb-3 md:mb-[1vh] w-[100%] md:w-[60%] md:ml-44 bg-[#F2F7FC] rounded-xl border border-solid border-slate-300">
+  <div id="navbar" class="flex items-center justify-center gap-7 h-[4rem] mb-3 md:mb-[1vh] w-[100%] md:w-[60%] md:ml-44 bg-[#F2F7FC] rounded-xl border border-solid border-slate-300">
 
 <a href="index.html">
   <div id="home-page" class="bg-[#E1E8EF] transition hover:bg-[#FF9C1A] active:opacity-5 flex items-center justify-center rounded-xl w-[52px] h-[52px]">
@@ -137,7 +139,7 @@
 
 <!-- main content start -->
 
-  <div id="contact" class="w-full h-[95%] md:h-[87%] bg-[#ffffff] rounded-[16px] py-6 px-6 md:px-[3.2rem]">
+  <div id="contact" class="w-full h-[92%] md:h-[87%] bg-[#ffffff] rounded-[16px] py-6 px-6 md:px-[3.2rem]">
     <div class="lg:flex lg:items-center mb-3 gap-5">
     <h1 class="font-poppins font-medium text-3xl tracking-wide">Contact</h1>
     <div class="h-[2px] w-[100%] lg:w-[30vh] md:w-[100%] bg-[#FF9C1A] rounded-xl"></div>
@@ -166,22 +168,22 @@
   </div>
 </div>
 
-  <div id="form-submit" class="w-full p-7 h:full md:h-[60%] bg-[#F2F7FC] rounded-lg mt-6">
-    <form action="">
+  <div id="form-submit" class="w-full p-7 h:full md:h-[67%] lg:h-[65%] bg-[#F2F7FC] rounded-lg mt-6">
+    <form action="" method="">
      <fieldset>
       <legend class="font-raleway text-xs mb-5">I am always open to discussing <span class="font-semibold">new projects, opportunities in tech world, partnerships</span> and more so <span class="font-semibold">mentorship</span>.</legend>
 
-      <label class="text-sm font-semibold" for="fname">Name:</label>
-      <input class="w-full md:w-[87%] my-3 bg-[#F2F7FC]" type="text" id="fname" name="fname">
+      <!-- <label class="text-sm font-semibold" for="fname">Name:</label> -->
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fname" name="fname" placeholder="Name :">
       <hr>
-      <label class="text-sm font-semibold" for="femail">Email:</label>
-      <input class="w-full md:w-[88%] my-3 bg-[#F2F7FC]" type="email" id="femail" name="femail">
+      <!-- <label class="text-sm font-semibold" for="femail">Email:</label> -->
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="email" id="femail" name="femail" placeholder="Email :">
       <hr>
-      <label class="text-sm font-semibold" for="fmessage">Message:</label>
-      <input class="w-full md:w-[82%] my-3 bg-[#F2F7FC]" type="text" id="fmessage" name="fmessage">
+      <!-- <label class="text-sm font-semibold" for="fmessage">Message:</label> -->
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fmessage" name="fmessage" placeholder="Message :">
       <hr>
-      <div id="button-submit" class="mt-[20px] h-7 w-[74px] rounded-2xl bg-gradient-to-br from-[#FD8A18] to-[#EE2C0B]">
-      <input class="text-xs w-[72px] bg-[#F2F7FC] rounded-2xl mx-[1px] py-[4px] border border-solid border-[#F2F7FC] transition hover:bg-transparent hover:text-white active:opacity-5 cursor-pointer" type="submit" value="Submit">
+      <div id="button-submit" class="mt-[20px] mx-auto h-[30px] w-[100%] rounded-2xl bg-gradient-to-br from-[#FD8A18] to-[#EE2C0B]">
+      <input id="btn" class="text-xs w-[99.5%] bg-[#F2F7FC] h-[28px] rounded-2xl mx-[1px] mt-[1px] py-[4px] border border-solid border-[#F2F7FC] transition hover:bg-transparent hover:text-white active:opacity-5 cursor-pointer" type="submit" value="Submit">
       </div>
      </fieldset>
     </form>
@@ -192,5 +194,9 @@
 </div>
 </section>
 </div>
+</div>
+
+<script src="main.js"></script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="3dc5adfc-0d78-4ddc-bcaa-6fca8390a33e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
