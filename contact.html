@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -21,14 +22,20 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   </style>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
-  <div class="bg-[#F2F5F9] px-[7vw] pb-20">
+<body class="dark:bg-[#242423]">
+  <div class="dark:bg-[#242423] bg-[#F2F5F9] px-[7vw] pb-20">
   <header>
-    <div>
+    <div class="flex items-center justify-between">
     <div id="my-portfolio" name="portfolio" class="flex items-center justify-center lg:justify-start md:justify-start h-[17vh]">
       <img class="mx-1" src="MyPortfolio.png" alt="portfolio">
+    </div>
+
+    <div>
+      <button class="tombol-terang dark:inline bg-white w-6 rounded-xl hidden" onclick="changeColor()"><i class="fa-solid fa-sun fa-md" style="color: #fac105;"></i></button>
+      <button class="tombol-gelap dark:hidden bg-[#161615] w-6 rounded-xl" onclick="changeColor()"><i class="fa-solid fa-moon fa-flip-horizontal fa-lg" style="color: #f9f9fa;"></i></button>
     </div>
   </div>
   </header>
@@ -39,13 +46,13 @@
   <!-- profile info start -->
 
   <section id="section-1">
-  <div id="my-profile" class="h-[638px] mb-3 bg-[#ffffff] pt-8 rounded-[16px]">
+  <div id="my-profile" class="dark:bg-[#131312] h-[638px] mb-3 bg-[#ffffff] pt-8 rounded-[16px]">
     <div class="w-full flex justify-center">
     <img class="w-40 h-48 rounded-lg bg-[#f3c42a]" src="miko.png" alt="profile">
     </div>
     <div id="profile-name" class=" text-center">
-    <h1 class="font-raleway font-semibold text-[21px] my-1">Susilo Jatmiko</h1>
-    <p class="font-raleway text-xs my-1.5 text-slate-500">FullStack Developer</p>
+    <h1 class="dark:text-white font-raleway font-semibold text-[21px] my-1">Susilo Jatmiko</h1>
+    <p class="dark:text-slate-200 font-raleway text-xs my-1.5 text-slate-500">FullStack Developer</p>
   </div>
 
     <div id="sosmed-account" class="flex justify-center gap-2 my-2">
@@ -92,7 +99,7 @@
     <div id="download-resume" class="flex justify-center">
       <a href="https://drive.google.com/file/d/1gimozWvqqR0j1Atpszm76Z-h9Xrfb6Yj/view?usp=sharing"  target="_blank">
       <button type="button" class="text-xs hover:opacity-[0.8] transition active:bg-[#EC1B09] mt-2 -mb-2 text-white font-semibold py-2 px-4 bg-[#FF9C1B]
-      rounded-3xl"><i class="fas fa-download text-white"></i>Download Resume</button>
+      rounded-3xl">Download Resume</button>
       </a>
     </div>
  
@@ -105,7 +112,7 @@
 
   <!-- navbar start -->
 
-  <div id="navbar" class="flex items-center justify-center gap-7 h-[4rem] mb-3 md:mb-[1vh] w-[100%] md:w-[60%] md:ml-44 bg-[#F2F7FC] rounded-xl border border-solid border-slate-300">
+  <div id="navbar" class="dark:bg-[#131312] dark:border-none flex items-center justify-center gap-7 h-[4rem] mb-3 md:mb-[1vh] w-[100%] md:w-[60%] md:ml-44 bg-[#F2F7FC] rounded-xl border border-solid border-slate-300">
 
 <a href="index.html">
   <div id="home-page" class="bg-[#E1E8EF] transition hover:bg-[#FF9C1A] active:opacity-5 flex items-center justify-center rounded-xl w-[52px] h-[52px]">
@@ -139,9 +146,9 @@
 
 <!-- main content start -->
 
-  <div id="contact" class="w-full h-[92%] md:h-[87%] bg-[#ffffff] rounded-[16px] py-6 px-6 md:px-[3.2rem]">
+  <div id="contact" class="dark:bg-[#131312] w-full h-[92%] md:h-[87%] bg-[#ffffff] rounded-[16px] py-6 px-6 md:px-[3.2rem]">
     <div class="lg:flex lg:items-center mb-3 gap-5">
-    <h1 class="font-poppins font-medium text-3xl tracking-wide">Contact</h1>
+    <h1 class="dark:text-white font-poppins font-medium text-3xl tracking-wide">Contact</h1>
     <div class="h-[2px] w-[100%] lg:w-[30vh] md:w-[100%] bg-[#FF9C1A] rounded-xl"></div>
   </div>
 
@@ -169,18 +176,18 @@
 </div>
 
   <div id="form-submit" class="w-full p-7 h:full md:h-[67%] lg:h-[65%] bg-[#F2F7FC] rounded-lg mt-6">
-    <form action="" method="">
+    <form id="cform">
      <fieldset>
       <legend class="font-raleway text-xs mb-5">I am always open to discussing <span class="font-semibold">new projects, opportunities in tech world, partnerships</span> and more so <span class="font-semibold">mentorship</span>.</legend>
 
       <!-- <label class="text-sm font-semibold" for="fname">Name:</label> -->
-      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fname" name="fname" placeholder="Name :">
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fname" name="fname" placeholder="Name :" required>
       <hr>
       <!-- <label class="text-sm font-semibold" for="femail">Email:</label> -->
-      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="email" id="femail" name="femail" placeholder="Email :">
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="email" id="femail" name="femail" placeholder="Email :" required>
       <hr>
       <!-- <label class="text-sm font-semibold" for="fmessage">Message:</label> -->
-      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fmessage" name="fmessage" placeholder="Message :">
+      <input class="w-full h-9 px-2 my-3 rounded-2xl bg-[#F2F7FC]" type="text" id="fmessage" name="fmessage" placeholder="Message :" required>
       <hr>
       <div id="button-submit" class="mt-[20px] mx-auto h-[30px] w-[100%] rounded-2xl bg-gradient-to-br from-[#FD8A18] to-[#EE2C0B]">
       <input id="btn" class="text-xs w-[99.5%] bg-[#F2F7FC] h-[28px] rounded-2xl mx-[1px] mt-[1px] py-[4px] border border-solid border-[#F2F7FC] transition hover:bg-transparent hover:text-white active:opacity-5 cursor-pointer" type="submit" value="Submit">
@@ -196,7 +203,8 @@
 </div>
 </div>
 
-<script src="main.js"></script>
+<script src="/javascript.js"></script>
+
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="3dc5adfc-0d78-4ddc-bcaa-6fca8390a33e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
